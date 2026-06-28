@@ -130,19 +130,6 @@ The designed standalone PV system demonstrated strong performance under Dakar's 
 
 ---
 
-### 📁 Repository Structure
-
-```
-standalone-pv-pvsyst/
-│
-├── README.md                  # This file
-├── report/
-│   ├── report_smart_grids.pdf # University submission report
-│   └── marwan_omar.pdf        # PVsyst simulation report (V7.4.8)
-└── .gitignore
-```
-
----
 
 ### 🛠️ Tools Used
 
@@ -243,16 +230,4 @@ standalone-pv-pvsyst/
 - النظام يُعدُّ **حلًا عمليًا وفعَّالًا من حيث التكلفة** لتوليد الكهرباء بعيدًا عن الشبكة.
 
 ---
-
-### 👨‍🎓 معلومات الطلاب
-
-| | |
-|---|---|
-| **الاسم** | عمر محمد عبد الحميد إبراهيم |
-| **الاسم** | مروان مصطفى أحمد الساعي |
-| **المستوى** | Level 200 |
-| **الكلية** | كلية الهندسة — جامعة الزقازيق |
-
----
-
 *Simulated with PVsyst V7.4.8 | Weather data: MeteoNorm 7.2 (Dakar/Yoff, Synthetic)*
