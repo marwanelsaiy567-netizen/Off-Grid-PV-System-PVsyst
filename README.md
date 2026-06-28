@@ -1,4 +1,4 @@
-# ☀️ Design of Standalone PV System — تصميم نظام طاقة شمسية معزول
+# Design of Standalone PV System — تصميم نظام طاقة شمسية معزول
 
 > **Zagazig University — Faculty of Engineering | Level 200**
 > 
@@ -6,7 +6,7 @@
 
 ---
 
-## 🇬🇧 English
+##  English
 
 ### Project Overview
 
@@ -16,7 +16,7 @@ The system is sized to meet residential load demands independently, without any 
 
 ---
 
-### ⚙️ System Specifications
+### System Specifications
 
 | Parameter | Value |
 |-----------|-------|
@@ -31,7 +31,7 @@ The system is sized to meet residential load demands independently, without any 
 
 ---
 
-### 🔋 System Components
+### System Components
 
 #### PV Array
 | Parameter | Value |
@@ -61,7 +61,7 @@ The system is sized to meet residential load demands independently, without any 
 
 ---
 
-### 🏠 Load Profile
+### Load Profile
 
 Daily residential consumption with **seasonal modulation**:
 
@@ -77,7 +77,7 @@ Daily residential consumption with **seasonal modulation**:
 
 ---
 
-### 📊 Simulation Results
+### Simulation Results
 
 #### Annual Energy Balance
 
@@ -120,7 +120,7 @@ Daily residential consumption with **seasonal modulation**:
 
 ---
 
-### ✅ Conclusion
+### Conclusion
 
 The designed standalone PV system demonstrated strong performance under Dakar's solar conditions:
 - The system achieves full solar coverage (SF = 100%) during **4 months** of the year (April–July).
@@ -131,7 +131,7 @@ The designed standalone PV system demonstrated strong performance under Dakar's 
 ---
 
 
-### 🛠️ Tools Used
+### Tools Used
 
 - **PVsyst V7.4.8** — Photovoltaic system simulation software
 - **MeteoNorm 7.2** — Weather data source (Dakar/Yoff station, synthetic)
@@ -140,7 +140,7 @@ The designed standalone PV system demonstrated strong performance under Dakar's 
 
 ---
 
-## 🇪🇬 العربي
+##  العربي
 
 ### نظرة عامة على المشروع
 
@@ -150,7 +150,7 @@ The designed standalone PV system demonstrated strong performance under Dakar's 
 
 ---
 
-### ⚙️ المواصفات التقنية للنظام
+### المواصفات التقنية للنظام
 
 | المعامل | القيمة |
 |---------|--------|
@@ -164,7 +164,7 @@ The designed standalone PV system demonstrated strong performance under Dakar's 
 
 ---
 
-### 🔋 مكونات النظام
+###  مكونات النظام
 
 #### الألواح الشمسية (PV Array)
 | المعامل | القيمة |
@@ -189,7 +189,7 @@ The designed standalone PV system demonstrated strong performance under Dakar's 
 
 ---
 
-### 🏠 الأحمال الكهربائية
+### الأحمال الكهربائية
 
 استهلاك سكني يومي مع **تعديل موسمي**:
 
@@ -205,7 +205,7 @@ The designed standalone PV system demonstrated strong performance under Dakar's 
 
 ---
 
-### 📊 نتائج المحاكاة
+### نتائج المحاكاة
 
 #### الميزان الطاقوي السنوي
 
@@ -221,7 +221,7 @@ The designed standalone PV system demonstrated strong performance under Dakar's 
 
 ---
 
-### ✅ الخلاصة
+### الخلاصة
 
 أثبت النظام المُصمَّم أداءً قويًا في ظروف داكار الشمسية:
 - يحقق النظام تغطية شمسية كاملة (SF = 100%) خلال **4 أشهر** في السنة (أبريل–يوليو).
