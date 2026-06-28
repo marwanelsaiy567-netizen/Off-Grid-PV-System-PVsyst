@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Project Portfolio: Standalone PV System Design | Marwan Al-Saiy
+    </title>
+    <style>
+      :root {
+        --bg-color: #0f172a;
+        --card-bg: #1e293b;
+        --accent-color: #0ea5e9;
+        --text-color: #f8fafc;
+        --text-muted: #94a3b8;
+        --border-color: #334155;
+        --success: #10b981;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      body {
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        line-height: 1.6;
+        padding-bottom: 60px;
+      }
+
+      header {
+        background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+        padding: 80px 20px;
+        text-align: center;
+        border-bottom: 1px solid var(--border-color);
+        position: relative;
+        overflow: hidden;
+      }
+
+      header::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(
+          circle,
+          rgba(14, 165, 233, 0.1) 0%,
+          transparent 60%
+        );
+        z-index: 1;
+      }
+
+      .header-content {
+        position: relative;
+        z-index: 2;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .badge {
+        background-color: rgba(14, 165, 233, 0.15);
+        color: var(--accent-color);
+        padding: 6px 16px;
+        border-radius: 50px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        display: inline-block;
+        margin-bottom: 20px;
+        border: 1px solid rgba(14, 165, 233, 0.3);
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+        color: var(--text-color);
+      }
+
+      .author-name {
+        font-size: 1.2rem;
+        color: var(--accent-color);
+        margin-bottom: 20px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .project-desc {
+        font-size: 1.1rem;
+        color: var(--text-muted);
+        max-width: 700px;
+        margin: 0 auto;
+      }
+
+      .container {
+        max-width: 1100px;
+        margin: 40px auto;
+        padding: 0 20px;
+      }
+
+      .main-stats {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+        margin-bottom: 40px;
+      }
+
+      .stat-card {
+        background-color: var(--card-bg);
+        border: 1px solid var(--border-color);
+        padding: 25px;
+        border-radius: 12px;
+        text-align: center;
+        transition: transform 0.3s ease;
+      }
+
+      .stat-card:hover {
+        transform: translateY(-5px);
+        border-color: var(--accent-color);
+      }
+
+      .stat-number {
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--accent-color);
+        margin-bottom: 5px;
+      }
+
+      .stat-label {
+        font-size: 0.95rem;
+        color: var(--text-muted);
+      }
+
+      .section-title {
+        font-size: 1.75rem;
+        margin: 40px 0 20px 0;
+        position: relative;
+        padding-left: 15px;
+        color: var(--text-color);
+      }
+
+      .section-title::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 15%;
+        height: 70%;
+        width: 5px;
+        background-color: var(--accent-color);
+        border-radius: 2px;
+      }
+
+      .grid-two-cols {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 30px;
+      }
+
+      .card {
+        background-color: var(--card-bg);
+        border: 1px solid var(--border-color);
+        border-radius: 12px;
+        padding: 30px;
+      }
+
+      .card h3 {
+        margin-bottom: 15px;
+        color: var(--accent-color);
+        border-bottom: 1px solid var(--border-color);
+        padding-bottom: 10px;
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      li {
+        margin-bottom: 12px;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px dashed rgba(51, 65, 85, 0.5);
+        padding-bottom: 6px;
+        font-size: 0.95rem;
+      }
+
+      li span:first-child {
+        color: var(--text-muted);
+        text-align: left;
+      }
+
+      li span:last-child {
+        font-weight: 600;
+        color: var(--text-color);
+        text-align: right;
+      }
+
+      .tech-tags {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-top: 15px;
+      }
+
+      .tag {
+        background-color: #334155;
+        padding: 4px 12px;
+        border-radius: 6px;
+        font-size: 0.85rem;
+      }
+
+      .conclusion-box {
+        background: linear-gradient(
+          135deg,
+          rgba(16, 185, 129, 0.1) 0%,
+          rgba(30, 41, 59, 1) 100%
+        );
+        border: 1px solid var(--success);
+        padding: 30px;
+        border-radius: 12px;
+        margin-top: 40px;
+      }
+
+      .conclusion-box h3 {
+        color: var(--success);
+        margin-bottom: 15px;
+      }
+
+      footer {
+        text-align: center;
+        margin-top: 60px;
+        color: var(--text-muted);
+        font-size: 0.9rem;
+      }
+
+      @media (max-width: 600px) {
+        h1 {
+          font-size: 1.8rem;
+        }
+        .grid-two-cols {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <span class="badge"
+          >Engineering Design & Simulation Portfolio (Level 200)</span
+        >
+        <h1>Design and Simulation of a Standalone PV System</h1>
+        <div class="author-name">Designed by: Marwan M. Al-Saiy</div>
+        <p class="project-desc">
+          An advanced sizing and comprehensive simulation study for an off-grid
+          solar energy system designed to power a residential unit in Dakar,
+          Senegal. Executed using professional PVsyst software to ensure maximum
+          power reliability, battery lifecycle health, and minimized energy
+          deficit.
+        </p>
+      </div>
+    </header>
+
+    <div class="container">
+      <!-- Main Simulation Metrics -->
+      <div class="main-stats">
+        <div class="stat-card">
+          <div class="stat-number">74.89%</div>
+          <div class="stat-label">Performance Ratio (PR)</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">92.96%</div>
+          <div class="stat-label">Solar Fraction (SF)</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">480 Wp</div>
+          <div class="stat-label">Array Nominal Power (Pnom)</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">784 kWh</div>
+          <div class="stat-label">Annual Energy Supplied</div>
+        </div>
+      </div>
+
+      <div class="grid-two-cols">
+        <!-- Site and Load Profile -->
+        <div class="card">
+          <h3>Geographical & Load Details</h3>
+          <ul>
+            <li>
+              <span>Location:</span> <span>Dakar / Taklou - Senegal</span>
+            </li>
+            <li><span>Coordinates:</span> <span>14.74° N / -17.48° W</span></li>
+            <li><span>Altitude:</span> <span>20 m</span></li>
+            <li><span>Load Type:</span> <span>Residential</span></li>
+            <li><span>Daily Consumption:</span> <span>2.3 kWh/day</span></li>
+            <li>
+              <span>Annual Horiz. Irradiation:</span> <span>2106.7 kWh/m²</span>
+            </li>
+          </ul>
+          <div class="tech-tags">
+            <span class="tag">MeteoNorm 7.2</span>
+            <span class="tag">Off-Grid Design</span>
+            <span class="tag">Dakar/Yoff Data</span>
+          </div>
+        </div>
+
+        <!-- Hardware Sizing & Components -->
+        <div class="card">
+          <h3>System Configuration & Sizing</h3>
+          <ul>
+            <li>
+              <span>PV Module Type:</span> <span>Poly 60 Wp 36 cells</span>
+            </li>
+            <li>
+              <span>Total Modules Used:</span>
+              <span>8 Units (4 strings × 2 series)</span>
+            </li>
+            <li><span>Total Collector Area:</span> <span>4.5 m²</span></li>
+            <li>
+              <span>Battery Technology:</span>
+              <span>Lead-acid, sealed, Gel</span>
+            </li>
+            <li>
+              <span>Battery Bank Config:</span>
+              <span>4 Units (2 parallel × 2 series)</span>
+            </li>
+            <li>
+              <span>Nominal Voltage & Capacity:</span>
+              <span>24 V / 320 Ah (6.1 kWh)</span>
+            </li>
+            <li>
+              <span>Charge Controller Type:</span>
+              <span>Universal MPPT Converter</span>
+            </li>
+          </ul>
+          <div class="tech-tags">
+            <span class="tag">PVsyst V7.4.8</span>
+            <span class="tag">MPPT Conversion</span>
+            <span class="tag">Gel Tech</span>
+          </div>
+        </div>
+
+        <!-- Balance and Losses Diagram Analysis -->
+        <div class="card">
+          <h3>Annual Energy Balance & Losses</h3>
+          <ul>
+            <li>
+              <span>Available Solar Energy:</span> <span>810.52 kWh/year</span>
+            </li>
+            <li>
+              <span>Unused Energy (Full Battery):</span>
+              <span>10.99 kWh/year</span>
+            </li>
+            <li>
+              <span>Missing Energy (Deficit):</span> <span>59.39 kWh/year</span>
+            </li>
+            <li>
+              <span>Ohmic Wiring Losses (DC):</span> <span>1.5% at STC</span>
+            </li>
+            <li><span>PV Thermal Loss Factor:</span> <span>11.61%</span></li>
+            <li><span>Controller Max Efficiency:</span> <span>97.0%</span></li>
+          </ul>
+        </div>
+
+        <!-- Field Orientation settings -->
+        <div class="card">
+          <h3>PV Array Orientation Settings</h3>
+          <ul>
+            <li><span>Field Type:</span> <span>Fixed Tilted Plane</span></li>
+            <li><span>Plane Tilt Angle:</span> <span>15°</span></li>
+            <li>
+              <span>Azimuth Angle:</span> <span>0° (Perfectly South)</span>
+            </li>
+            <li><span>Transposition Factor (FT):</span> <span>1.10</span></li>
+          </ul>
+          <p
+            style="
+              font-size: 0.9rem;
+              color: var(--text-muted);
+              margin-top: 15px;
+            "
+          >
+            The system tilt and orientation angles were fully optimized in
+            relation to winter incident irradiation profiles to guarantee
+            reliable grid-free performance during lower solar yield intervals.
+          </p>
+        </div>
+      </div>
+
+      <!-- Professional Conclusion Section -->
+      <div class="conclusion-box">
+        <h3>Engineering Evaluation & Conclusion</h3>
+        <p>
+          The comprehensive simulation results verified that the designed
+          standalone photovoltaic installation successfully meets the targeted
+          residential demand with an excellent annual Solar Fraction of 92.96%.
+          The observed system dropouts and collection constraints remain
+          strictly within the standard thermodynamic parameters of photovoltaic
+          modules and internal charge storage cycle tolerances. Ultimately, the
+          system establishes a highly practical, reliable, and technically
+          viable engineering strategy for autonomous, environment-friendly
+          electricity supply in remote off-grid domains.
+        </p>
+      </div>
+
+      <footer>
+        <p>
+          &copy; 2026 Engineering Portfolio | Developed by Eng. Marwan M.
+          Al-Saiy
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
