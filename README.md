@@ -2,7 +2,7 @@
 
 > **Zagazig University — Faculty of Engineering | Level 200**
 > 
-> **Omar Mohamed Abd El-Hamid Ibrahim & Marwan Mostafa Ahmed El-Saei**
+> ** Marwan Mostafa Ahmed El-Saei**
 
 ---
 
