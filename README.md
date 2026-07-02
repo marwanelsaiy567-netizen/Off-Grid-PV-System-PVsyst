@@ -137,6 +137,8 @@ The designed standalone PV system demonstrated strong performance under Dakar's 
 - **MeteoNorm 7.2** — Weather data source (Dakar/Yoff station, synthetic)
 
 ---
+### Project portfolio
+https://marwanelsaiy567-netizen.github.io/Off-Grid-PV-System-PVsyst/
 
 ---
 
