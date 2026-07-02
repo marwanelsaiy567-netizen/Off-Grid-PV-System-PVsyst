@@ -222,6 +222,8 @@ https://marwanelsaiy567-netizen.github.io/Off-Grid-PV-System-PVsyst/
 | الإنتاج النوعي | 1,633 كيلوواط.ساعة/كيلوواط.ذروة/سنة |
 
 ---
+### ملف المشروع 
+https://marwanelsaiy567-netizen.github.io/Off-Grid-PV-System-PVsyst/
 
 ### الخلاصة
 
